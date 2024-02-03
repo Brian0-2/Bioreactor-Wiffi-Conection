@@ -1,0 +1,126 @@
+:root{
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --rojiso: #B22222;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --grisClaro: #DFE9F3;
+    --naranjiso: #FF5733 ;
+    --grisaseo: #85929E ;
+    --azul:#0000CC ;
+}
+body{
+    font-family: "Krub", sans-serif;
+    background-image: url(../imagenes/fondolimpio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+#titulo{
+    text-align: center;
+    color: var(--secundario);
+}
+.contenedor{
+    /*120rem = 1,200 pixeles*/
+         max-width: 80rem;
+    /*margin es para definir en que posicion se va a colocar un elemento*/
+    /*margin-top:0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;*/
+    /*Este margin aplica igual que el ejemplo de arriva*/
+         margin: 0 auto;
+}
+.sombra{
+        /*ingresamos a :https://www.cssmatic.com/box-shadow. para modificar las sombras como queramos de nuestras paginas*/
+        box-shadow: 5px 5px 15px 0px rgba(94,94,94,0.48);
+
+        /*Para el fondo de mis servicios*/
+        background-color: var(--blanco);
+        /*Para el espacio de la cabeza de mis servicios con respecto lo que engloba mis servicios*/
+        padding: 2rem;
+        /*para hacer circular los bordes de mis servicios*/
+        border-radius: 1rem;
+}
+table ,th, td{
+
+    border: 1px solid;
+
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+#datos{
+        
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      #datos td, #datos th {
+        border: 1px solid var(--negro);
+        padding: 8px;
+        text-align:center;
+        
+      }
+      
+      #datos tr:nth-child(even){background-color:var(--grisaseo)}
+      
+      #datos tr:hover {background-color:var(--primario);}
+      
+      #datos th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        background-color:var(--secundario);
+        color: white;
+        
+      }
+      #pie{
+        /*ingresamos a :https://www.cssmatic.com/box-shadow. para modificar las sombras como queramos de nuestras paginas*/
+        box-shadow: 5px 5px 15px 0px rgba(94,94,94,0.48);
+    
+        /*Para el fondo de mis servicios*/
+        background-color: var(--grisaseo);
+        color: var(--blanco);
+        /*Para el espacio de la cabeza de mis servicios con respecto lo que engloba mis servicios*/
+        padding: .5em;
+        /*para hacer circular los bordes de mis servicios*/
+        border-radius: 1rem;
+    
+        max-width: 100%;
+        
+        margin-top: 30px;
+    }
+  
+      
+    #pie span{
+      font-size: 10px;
+  }
+
+#nav-paginacion{
+ 
+  display: inline-block;
+}
+#nav-paginacion a{
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+#nav-paginacion a:hover {
+  background-color:var(--primario)
+}
+#nav-paginacion a {
+  border-radius: 30%;
+  margin: 0 4px;
+}
+#lbl-total{
+  text-align: left;
+}
+#nav-paginacion ul li .active{
+background: var(--oscuro);
+color: var(--blanco);
+}
+
+

@@ -1,0 +1,190 @@
+:root{
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --rojiso: #B22222;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --grisClaro: #DFE9F3;
+    --naranjiso: #FF5733 ;
+    --grisaseo: #85929E ;
+    --azul:#0000CC ;
+}
+body{
+
+    font-family: "Krub", sans-serif;
+    background-image: url(../imagenes/fondolimpio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#titulo{
+    text-align: center;
+    font-size: 20px;
+}
+
+#proyecto{
+    text-align:center;
+    color: var(--secundario);
+}
+.datos{
+
+    font-size: 30px;
+    /*Fuente en negritas*/
+    font-weight: bold;
+}
+/*Apartado de servicios*/
+@media (min-width: 768px){
+    .servicios{
+        /*display grid o css grid  es lo que te prmite definir la ubicaciony tamaño de los elementos
+        de tu sitio web*/
+        display:grid;
+        /*Es para modificar o definir en un solo apartado o division en este caso la division que hay en los servicios
+        pero este es para las columnas y exoste para las filas igual*/
+        grid-template-columns:repeat(2, 1fr);
+        
+        padding: 40px;
+        margin-left: 7rem;
+        margin-right: 7rem;
+        column-gap: 2rem;
+    }
+    
+}
+
+                                                                        /*ICONOS DE FONDO AMARILLO*/
+
+.servicio{
+        /*display flex coloca los items de izquierda a derecha*/
+        display: flex;
+        /*le decimos la direccion que va a tomar en este caso que los acomode por columna*/
+        flex-direction: column;
+        /*los alineamos hacia el centro*/
+        align-items: center;
+
+}
+.servicio h3{
+
+        color: var(--secundario);
+
+}
+.servicio p {
+    /*para dar una alineacion mas larga para que se lea mejor*/
+        line-height: 2rem;
+        font-size: 20px;
+        font-weight: normal;
+        text-align: center;
+
+}
+/*Este apartado es para los iconos de color amarillo*/
+.servicio  .iconos{
+
+        height: 12rem;
+        width: 12rem;
+        /*Para el color de el fondo de los circilos*/
+        background-color: var(--primario);
+        /*esto es para cuando tengo un cuadrado, desgasto las orillas a un 50% y da la forma del circulo*/
+        border-radius: 50%;
+        /*es para pponer de izquierda a la derecha*/
+        display: flex;
+        /*esto es para que se centren tanto hacia arriva ,abajo, derecha, isquierda y haya una separacion de los iconos como los iconos de en medio*/
+        justify-content:space-evenly;
+        /*para que los componentes se coloquen en el centro dentro del div*/
+        align-items: center;
+
+}
+.contenedor{
+    /*120rem = 1,200 pixeles*/
+         max-width: 80rem;
+    /*margin es para definir en que posicion se va a colocar un elemento*/
+    /*margin-top:0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;*/
+    /*Este margin aplica igual que el ejemplo de arriva*/
+         margin: 0 auto;
+}
+.sombra{
+        /*ingresamos a :https://www.cssmatic.com/box-shadow. para modificar las sombras como queramos de nuestras paginas*/
+        box-shadow: 5px 5px 15px 0px rgba(94,94,94,0.48);
+
+        /*Para el fondo de mis servicios*/
+        background-color: var(--blanco);
+        /*Para el espacio de la cabeza de mis servicios con respecto lo que engloba mis servicios*/
+        padding: 2rem;
+        /*para hacer circular los bordes de mis servicios*/
+        border-radius: 1rem;
+}
+
+
+
+                                /*NAVEGACION PRINCIPAL*/
+.nav-background{
+    /**/
+     background-color:var(--secundario);
+     padding: 10px;
+}
+
+
+/*Parte de (Inicio, sobre nosotros) */
+.navegacion-principal {
+
+     display: flex;
+     flex-direction: column;
+
+}
+/*Con este metodo acomodo el CSS para los diferentes tipos de dispositivos*/
+/*El termino son media Querie*/
+@media (min-width: 768px){
+.navegacion-principal{
+
+     flex-direction: row;
+/*space-between es para separarlo de forma que se ve en la 
+pagina web*/
+     justify-content: space-evenly;
+}
+}
+
+.navegacion-principal a{
+     display: block;
+     text-align: center;
+     color: var(--blanco);
+/*Para quitar la linea de abajo de los enlaces*/
+     text-decoration: none;
+     font-size: 2rem;
+     font-weight: 700; 
+/*pading agrega mas espacio de ancho en general a una etiqueta*/  
+     padding: 1rem;
+}
+
+/*hover es un evento para pasar el mouse por ensima y aga la accion*/
+.navegacion-principal a:hover{
+
+     background-color: var(--primario);
+    color:var(--oscuro)
+}
+
+
+
+
+
+
+                                                /*PIE DE PAGINA*/
+#pie{
+    /*ingresamos a :https://www.cssmatic.com/box-shadow. para modificar las sombras como queramos de nuestras paginas*/
+    box-shadow: 5px 5px 15px 0px rgba(94,94,94,0.48);
+
+    /*Para el fondo de mis servicios*/
+    background-color: var(--grisaseo);
+    color: var(--blanco);
+    /*Para el espacio de la cabeza de mis servicios con respecto lo que engloba mis servicios*/
+    padding: .5em;
+    /*para hacer circular los bordes de mis servicios*/
+    border-radius: 1rem;
+
+    max-width: 100%;
+    
+    margin: 0 auto;
+}
+#pie span{
+font-size: 10px;
+}
